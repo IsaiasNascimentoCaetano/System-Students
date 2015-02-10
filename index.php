@@ -1,4 +1,4 @@
-<!Doctype html>
+<Doctype html>
 <html>
 
 <head>
@@ -36,6 +36,15 @@
 
 		<h1>Informações</h1>
 		<p>Este é um teste para sistema escolar</p>		
+		<?php
+				
+			//Just a test
+			include("classes/people.php");
+			include("classes/student.php");			
+			$f = new people\student();
+
+
+		?>
 		
 	</div>
 	
