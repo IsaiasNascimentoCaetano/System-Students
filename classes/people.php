@@ -1,12 +1,53 @@
 <?php
 
-	namespace people{
+	namespace classes{
 
-		class people{
- 
-			public function __construct(){
+		abstract class people{
+ 			
+
+			//atributes
+			protected $name;
+			protected $age;
+			protected $id;//number of register in  the database
+			
+			//Get and set methods
+			public function getName(){
+			
+				return $this->name;
+
+			}
+
+			public function setName($name){
+
+				$this->name = $name;
+	
+			}
+			public function getAge(){
+
+				return $this->age;
+
+			}	
+			public function setAge($age){
+
+				$this->age = $age;
+		
+			}		
+			public function getId(){
+
+				return $this->id;
+
+			}
+			public function setId($id){
+
+				$this->id = $id;	
+
+			}			
+		
+			//Construct
+			public function __construct($name, $age){
 				
-				echo "<p>Objeto novo</p>";
+				$this->name = $name;
+				$this->age = $age;
 
 			}
 	

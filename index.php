@@ -39,9 +39,9 @@
 		<?php
 				
 			//Just a test
-			include("classes/people.php");
-			include("classes/student.php");			
-			$f = new people\student();
+			include_once "autoload.php";
+						
+			$f = new student();
 
 
 		?>
