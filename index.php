@@ -1,4 +1,4 @@
-<Doctype html>
+<!Doctype html>
 <html>
 
 <head>
@@ -37,13 +37,16 @@
 		<h1>Informações</h1>
 		<p>Este é um teste para sistema escolar</p>		
 		<?php
-				
+					
 			//Just a test
-			include_once "autoload.php";
-						
-			$f = new student();
+			require __DIR__ . '/autoload.php';	
+			
+			use classes\student;
 
-
+			$f = new student("isaias",17,20);
+			echo $f->getName();
+		
+			
 		?>
 		
 	</div>
