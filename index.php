@@ -41,16 +41,19 @@
 			//Just a test
 			require __DIR__ . '/autoload.php';	
 			
-			use classes\student;
-			use classes\teacher;
-
+			use classes\peoples\student;
+			use classes\peoples\teacher;
+			use classes\data_base\database;
+		
 			$f = new student("isaias",17,20);
 			echo $f->getName();
 			echo $f->getAge();
 
 			$d = new teacher("tiago", 39, 10);
 			echo $d->getName();
-					
+			
+			$e = new database(HOST, USER, PASSWORD);
+								
 			
 		?>
 		

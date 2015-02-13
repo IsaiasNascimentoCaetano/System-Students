@@ -3,7 +3,7 @@
 	function load_classes($class){
 		
 		$name_class = __DIR__ . "/" . str_replace("\\", "/", $class) . '.php';
-		
+				
 		require $name_class;
 
 	}
