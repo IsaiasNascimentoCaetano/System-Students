@@ -8,7 +8,7 @@
 		define("PASSWORD", "");
 	
 		//abstract 
-		class database{
+		abstract class database{
 	
 			protected $connection;
 			protected $db_selected;	

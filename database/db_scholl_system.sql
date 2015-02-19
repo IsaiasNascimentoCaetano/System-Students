@@ -75,3 +75,12 @@ CREATE TABLE Notes(
 );
 
 
+INSERT INTO Type_User(Name_of_type) VALUES ('Administration');
+INSERT INTO Type_User(Name_of_type) VALUES ('Teacher');
+INSERT INTO Type_User(Name_of_type) VALUES ('Student');
+
+INSERT INTO Login(id_Type,Full_name,Email,Age,RG) VALUES (1,'root','root',100,'root');
+
+INSERT INTO Administration(id_Login,Senior_position) VALUES (1,'Administrador-Root');
+
+
