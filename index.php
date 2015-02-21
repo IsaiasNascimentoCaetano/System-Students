@@ -4,20 +4,20 @@
 <head>
 
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/styleIndex.css">
+	<link rel="stylesheet" href="pages/css/styleIndex.css">
 	<title>System Students</title>
 
 </head>
 
 <body>
 	<div id="father">
+	
+	<header>
 
-	<?php
+  		<img src="pages/images/Logo.png" id="logo"/>
+		<img src="pages/images/Arms.png" id="arms"/>
 
-		//Include the header
-		include("header.php");
-
-	?>
+ 	</header>
 	
 	<!--Menu-->
 	<div id="menu">
@@ -27,7 +27,7 @@
 			<li><h2><a href=#>Notas</a><h2></li>
 			<li><h2><a href=#>Inserir novos alunos</a><h2></li>
 			<li><h2><a href=#>Inserir notas</a><h2></li>
-			<li><h2><a href=#>Logar</a><h2></li>		
+			<li><h2><a href="pages">Logar</a><h2></li>		
 		</ul>
 	</div>
 
@@ -39,7 +39,7 @@
 		<?php
 					
 			//Just a test
-			require __DIR__ . '/autoload.php';	
+			require __DIR__ . '/pages/autoload.php';	
 			
 			use classes\peoples\student;
 			use classes\peoples\teacher;

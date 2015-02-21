@@ -1,0 +1,72 @@
+body{
+
+	background-color: #ffffff;
+
+}
+a{
+
+	text-decoration: none;
+	color:white;
+
+}
+#logo{
+
+	position: relative;
+	left: 300px;
+	width: auto;
+	height: auto;
+}
+#arms{
+
+	position: absolute;
+	left: 10px;
+	width: auto;
+	height: auto;
+
+}
+#menu{
+
+	position: relative;
+	float: left;
+	margin-top: 100px;
+	top: auto;
+	width: auto;
+	
+}
+#list{
+
+	background: #008B45; 
+	
+}
+a:hover{
+
+	color: #00CD00;
+
+}
+#information{
+
+	position: relative;
+	top: 80px;
+	margin-left: 50px;
+	float: left;
+	width: 1000px;
+	border: 1px gray solid;	
+}
+h1{
+
+	text-align: center;
+	size: 40px;
+	color: blue;
+
+}
+p{
+
+	margin-left: 10px;
+
+}
+#father{
+	
+	position: relative;	
+
+}
+
