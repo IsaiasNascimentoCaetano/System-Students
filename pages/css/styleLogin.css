@@ -1,0 +1,41 @@
+#father{
+
+	position: relative;
+
+}
+#logo{
+
+	position: relative;
+	width: auto;
+	top: -120px;
+	left: 60px;
+	height: auto;
+	
+}
+#arms{
+
+	position: relative;
+	left: 10px;
+	width: auto;
+	height: auto;	
+
+}
+#loginBox{
+	
+	position: relative;
+	text-align: center;
+	height: auto;
+	width: auto;
+
+}
+#box{
+
+	position: relative;
+	border: 1px solid #000000;
+	height: auto;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;	
+		
+}
+

@@ -23,11 +23,11 @@
 	<div id="menu">
 		<ul id="list" type="none">
 
-			<li><h2><a href=#>Lista de alunos</a><h2></li>
+			<li><h2><a href="pages/Login.php">Logar</a><h2></li>
 			<li><h2><a href=#>Notas</a><h2></li>
 			<li><h2><a href=#>Inserir novos alunos</a><h2></li>
 			<li><h2><a href=#>Inserir notas</a><h2></li>
-			<li><h2><a href="pages">Logar</a><h2></li>		
+			<li><h2><a href=#>Lista de alunos</a><h2></li>		
 		</ul>
 	</div>
 

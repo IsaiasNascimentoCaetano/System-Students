@@ -1,9 +1,9 @@
 <?php
 
 	//Logo
-	echo '<header>';
-	echo '<img src="images/Logo.png" id="logo"/>';
+	echo '<div id="header">';
 	echo '<img src="images/Arms.png" id="arms"/>';
-	echo '</header>';
+	echo '<img src="images/Logo.png" id="logo"/>';
+	echo '</div>';
 
 ?>
