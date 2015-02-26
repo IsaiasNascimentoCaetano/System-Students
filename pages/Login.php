@@ -1,4 +1,8 @@
-<?php require __DIR__ . '/autoload.php'?>
+<?php 
+
+	require __DIR__ . '/autoload.php';
+	
+?>
 <html lang="pt-br">
 
 	<head>
@@ -13,8 +17,12 @@
 	<body>
 
 		<div id="father">
-
-			<?php include("header.php")?>				
+		
+			<?php 
+							
+				include("header.php");
+				
+			?>				
 
 			<!--Login box-->
 			<div id="loginBox">

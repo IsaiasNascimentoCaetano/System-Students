@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<script type="text/javascript" src="javascript/jquery-1.11.2.min.js"></script>
+
+</head>
+
+<body>
+
 <?php
 	
 	//init the session
@@ -19,9 +30,29 @@
 
 	if($login_status){
 
-		echo 'conectadoconectado';
+		echo 'user connected';
 
+	}
+	else{
+		
+		echo '<script type="text/javascript">
+
+				$(document).ready(function(){
+
+					alert("Usuário ou senha errados");
+					windows.location.assign("Login.php");			
+	
+				});
+
+			</script>';	
+
+		
 	}
 
 
 ?>
+
+</body>
+
+</html>
+
