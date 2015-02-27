@@ -27,12 +27,12 @@
 				}		
 							
 			}	
-			
-			//close the connection
-			public function close(){
+		
+			public function __destruct(){
 
+				//Close the connection
 				mysql_close($this->connection);
-
+				
 			}
 
 			//login
@@ -47,7 +47,7 @@
                                  $result = mysql_query($query, $this->connection);
                               
 				 $data = mysql_fetch_array($result);
-					                        				       				
+
                                  if($data['Full_name'] == $name && $data['Password'] == $password){
                                 
                                          return true;
@@ -60,6 +60,22 @@
                                  }
  
 	                }
+
+			//get the type
+			public function get_type($name, $password){
+
+				$query = sprintf("SELECT id_Type FROM Login WHERE Full_name = '%s' and Password = '%s';",
+				
+				mysql_real_escape_string($name),
+				mysql_real_escape_string($password));
+
+				$result = mysql_query($query, $this->connection);
+				
+				$data = mysql_fetch_array($result);
+			
+				return $data['id_Type'];
+
+			}
 	
 
 		}
