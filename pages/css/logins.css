@@ -1,0 +1,35 @@
+#father{
+
+	position: relative;
+	
+}
+#logo{
+
+	position: relative;
+	width: auto;
+	top: -120px;
+	left: 60px;
+	height: auto;
+
+}
+#arms{
+
+	position: relative;
+	left: 10px;
+	width: auto;
+	height: auto;
+
+}
+#menu{
+	
+	background: green;
+	height: auto;
+	width: 300px;
+	position: relative;
+	left: 50%;
+	margin-left: -150px;
+	text-align: center;	
+	font-size: 20px;
+	color: white;
+	
+}
