@@ -6,6 +6,34 @@
 	<script type="text/javascript" src="javascript/jquery-1.11.2.min.js"></script>
 	<link rel="stylesheet" href="css/logins.css">
 
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			//Change color
+			$("#insertTeachers").mouseover(function(){
+
+				$("#insertTeachers").css("color","blue");
+				
+			});	
+			
+			$("#insertTeachers").mouseout(function(){
+
+				$("#insertTeachers").css("color", "white");
+				
+			});	
+
+			//Change page
+			$("#insertTeachers").click(function(){
+
+				location.href = "insertTeache.php";
+
+			});	
+
+		});
+
+	</script>
+
 </head>
 
 <body>

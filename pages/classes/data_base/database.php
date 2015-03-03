@@ -76,7 +76,23 @@
 				return $data['id_Type'];
 
 			}
-	
+
+			//Create login
+			public function create_login($type, $name, $password, $email, $age, $rg){
+
+				$query = sprintf("INSERT INTO Login(id_Type,Full_name,Password,Email,Age,RG) 
+						  VALUES('%s','%s','%s','%s','%s','%s');",
+
+				mysql_real_escape_string($type),
+				mysql_real_escape_string("'$name'"),
+				mysql_real_escape_string("'$password'"),
+				mysql_real_escape_string("'$email'"),
+				mysql_real_escape_string($age),
+				mysql_real_escape_string("'$rg'"));
+			
+				mysql_query($query, $this->connection) or die(mysql_error());			
+
+			}
 
 		}
 	

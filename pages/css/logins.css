@@ -33,3 +33,21 @@
 	color: white;
 	
 }
+#formTeacher{
+
+	height:auto;
+	width: 500px;
+	position: relative;
+	left: 50%;
+	margin-left: -250px;
+	text-align: center;
+	font-size: 18px;
+	border: solid 1px;
+	
+}
+#footer{
+
+	position: relative;	
+	text-align: center;
+
+}
