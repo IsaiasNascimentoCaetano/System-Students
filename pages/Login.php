@@ -44,13 +44,9 @@
 						
 			//Check if cookies exists
 			if(isset($_COOKIE["name"]) && isset($_COOKIE["password"])){
+							
+				header("Location: LoginPage.php");
 			
-				if(!$_COOKIE["name"] == "" || !$_COOKIE["password"]){
-	
-					header("Location: LoginPage.php");
-		
-				}			
-
 			}
 
 		?>

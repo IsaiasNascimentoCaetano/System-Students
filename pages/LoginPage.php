@@ -92,7 +92,7 @@
 
 	//check if user and password is right
 	$login_status = $login->login($name, $password);
-
+		
 	//if user not exists
 	if(!$login_status){
 	
@@ -113,12 +113,11 @@
 		//get the type
 		$type = $login->get_type($name, $password);
 
-		//Create the cookies
-			
-		setcookie("name",$name,time() + 3600);
-		setcookie("password",$password, time() + 3600);
-		setcookie("type", $type, time() + 3600);
-			
+		//Create the cookies			
+		setcookie("name",$name);
+		setcookie("password",$password);
+		setcookie("type", $type);
+		
 		echo '<div id="father>"';
 	
 		include("header.php");
