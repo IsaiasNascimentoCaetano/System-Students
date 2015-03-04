@@ -126,7 +126,7 @@
 		echo '<div id="menu">';
 
 		//See the type
-		switch($_COOKIE["type"]){
+		switch($type){
 
 			case 1:
 				echo '<p id="insertNotes">Inserir notas</p>';
