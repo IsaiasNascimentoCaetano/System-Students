@@ -10,25 +10,55 @@
 
 		$(document).ready(function(){
 
-			//Change color
-			$("#insertTeachers").mouseover(function(){
+			//Change the cursor
+			$("#menu").mouseover(function(){
+		
+				$("#menu").css("cursor","default");
 
+			});
+
+			////////////////////////////////////////////
+			//Change color
+
+			//Insert Teacher button
+			$("#insertTeachers").mouseover(function(){
+				
 				$("#insertTeachers").css("color","blue");
 				
 			});	
 			
 			$("#insertTeachers").mouseout(function(){
-
+				
 				$("#insertTeachers").css("color", "white");
 				
 			});	
 
+			//Logout button
+			$("#logout").mouseover(function(){
+
+				$("#logout").css("color","blue");
+			
+			});			
+
+			$("#logout").mouseout(function(){
+
+				$("#logout").css("color","white");
+		
+			});
+		
+			
+			/////////////////////////////////////////
 			//Change page
 			$("#insertTeachers").click(function(){
 
 				location.href = "insertTeache.php";
 
 			});	
+			$("#logout").click(function(){
+
+				location.href = "logout.php";
+
+			});
 
 		});
 
@@ -39,16 +69,20 @@
 <body>
 
 <?php
-	
-	//init the session
-	session_start();
 
-	$name = $_POST['fullname'];
-	$password = $_POST['password'];
+	if(!isset($_COOKIE["name"]) || !isset($_COOKIE["password"])){
+					
+		$name = $_POST['fullname'];
+		$password = $_POST['password'];
+			
+	}
+	else{
 
-	$_SESSION['name'] = $name;
-	$_SESSION['password'] = $password;
-	
+		$name = $_COOKIE["name"];
+		$password = $_COOKIE["password"];
+
+	}
+
 	require "autoload.php";	
 
 	use classes\data_base\database;
@@ -59,8 +93,9 @@
 	//check if user and password is right
 	$login_status = $login->login($name, $password);
 
+	//if user not exists
 	if(!$login_status){
-
+	
 		echo '<script type="text/javascript">
 
 				$(document).ready(function(){
@@ -77,8 +112,13 @@
 
 		//get the type
 		$type = $login->get_type($name, $password);
-		$_SESSION['type'] = $type;
 
+		//Create the cookies
+			
+		setcookie("name",$name,time() + 3600);
+		setcookie("password",$password, time() + 3600);
+		setcookie("type", $type, time() + 3600);
+			
 		echo '<div id="father>"';
 	
 		include("header.php");
@@ -86,7 +126,7 @@
 		echo '<div id="menu">';
 
 		//See the type
-		switch($_SESSION['type']){
+		switch($_COOKIE["type"]){
 
 			case 1:
 				echo '<p id="insertNotes">Inserir notas</p>';
@@ -109,7 +149,9 @@
 				break;				
 
 		}
-
+	
+		echo '<p id="logout">Deslogar</>';
+		
 		echo '</div>';
 
 		echo '</div>';

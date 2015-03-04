@@ -1,8 +1,3 @@
-<?php 
-
-	require __DIR__ . '/autoload.php';
-	
-?>
 <html lang="pt-br">
 
 	<head>
@@ -22,6 +17,7 @@
 							
 				include("header.php");
 				
+
 			?>				
 
 			<!--Login box-->
@@ -43,6 +39,21 @@
 			<div>
 
 		</div>			
+
+		<?php
+						
+			//Check if cookies exists
+			if(isset($_COOKIE["name"]) && isset($_COOKIE["password"])){
+			
+				if(!$_COOKIE["name"] == "" || !$_COOKIE["password"]){
+	
+					header("Location: LoginPage.php");
+		
+				}			
+
+			}
+
+		?>
 
 	</body>
 
