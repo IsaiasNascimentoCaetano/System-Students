@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
 
@@ -13,17 +14,21 @@
 
 <body>
 
-	<?php include("header.php");?>
+	<?php 
+	
+		include("header.php");
+		$_SESSION['insert'] = "teacher";
 
-	<form id="formTeacher" method="POST" action="">
+	?>
+
+	<form id="formTeacher" method="POST" action="inserted.php">
 
 	<p>Nome: <input type="text" name="name"></p>
 	<p>Idade: <input type="text" name="age"></p>
 	<p>Email: <input type="text" name="email"></p>
-	<p>Senha: <input type="text" name="password"></p>
+	<p>Senha: <input type="password" name="password"></p>
 	<p>RG: <input type="text" name="RG"></p>
-	<p>Tipo: <input type="text" name="type"></p>
-	
+		
 	<br>
 
 	<p>Componente Curricular: <input type="text" name="component"></p>
