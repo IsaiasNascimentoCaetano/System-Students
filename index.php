@@ -53,8 +53,7 @@
 			echo $d->getName();
 			
 			$e = new database(HOST, USER, PASSWORD);
-								
-			
+		            		
 		?>
 		
 	</div>
